@@ -23,8 +23,18 @@ class Volunteer{
         this.skills = data.skills
     }
 
-    
+    static newVolunteerForm(){
+        let newVolunteerFormDiv = document.getElementById('volunteer-form')
+        newVolunteerFormDiv.innerHTML = 
+        ` <form onsubmit="createVolunteer(); return false;">` + 
+        volunteerFormFields + 
+        `<input type="submit" value="Add New Volunteer" style="color:white;background-color:#689e7b">
+        </form>
+        <br/>`
+    }
 
+    static editVolunteerForm(){
 
+    }
 
 }
