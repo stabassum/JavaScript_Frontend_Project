@@ -1,0 +1,37 @@
+body {
+    margin: 100;
+    padding: 20;
+    font-family: Helvetica;
+  }
+  
+  header {
+    background-color: #4caf50;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  header h2 {
+    padding: 10px;
+    margin: 0;
+    font-family: Helvetica;
+
+  }
+
+  div.card {
+    background-color: #7CB07C;
+    /*height: 250px;*/
+    /*width: 800px; */
+    box-shadow: 10px 10px grey;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px;
+    /* font-size: 1.00em; */
+
+  }
+  
+  button {
+    font-size: 2.0em;
+    color: beige;
+    /* background-color: gray; */
+    /*border-radius: 10px;*/
+  }
