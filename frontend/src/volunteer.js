@@ -38,3 +38,57 @@ class Volunteer{
     }
 
 }
+
+// Retreive all volunteers
+
+function getVolunteers(){
+    fetch("http://localhost:3000/volunteers")
+    .then(resp => resp.json())
+    .then(data => {
+        renderVolunteersHtml(data)
+        addVolunteersClickListeners()
+        addEventsClickListeners()
+    })
+}
+
+// Create new volunteers
+
+function createVolunteer(){
+    const volunteer = {
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        contact: document.getElementById('contact').value,
+        skills: document.getElementById('skills').value,
+    }
+
+    fetch("http://localhost:3000/volunteers", {
+        method: 'POST',
+        body: JSON.stringify(volunteer),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json'}
+    })
+    .then(resp => resp.json())
+    .then(volunteer => {
+        clearVolunteersHtml()
+        getVolunteers()
+        Volunteer.newVolunteerForm()
+    })
+}
+
+// Edit volunteer form
+
+function editVolunteer(){
+
+}
+
+// Delete a volunteer
+
+function deleteVolunteer(){
+    let volunteerID = this.parentElement.getAttribute('data-volunteer-id')
+
+    fetch()
+}
+
+function addVolunteersClickListeners(){
+    
+}
+
