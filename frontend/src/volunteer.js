@@ -14,6 +14,7 @@ const volunteerFormFields =
         <label><strong>Skills: </strong></label><br/>
         <textarea id="skills" rows="4" cols="25"></textarea><br/>`
 
+
 class Volunteer{
     constructor(data) {
         this.id = data.id
@@ -28,7 +29,7 @@ class Volunteer{
         newVolunteerFormDiv.innerHTML = 
         ` <form onsubmit="createVolunteer(); return false;">` + 
         volunteerFormFields + 
-        `<input type="submit" value="Add New Volunteer" style="color:white;background-color:#689e7b">
+        `<input type="submit" value="Add New Volunteer" style="color:black;background-color:white">
         </form>
         <br/>`
     }
@@ -89,6 +90,6 @@ function deleteVolunteer(){
 }
 
 function addVolunteersClickListeners(){
-    
+
 }
 
