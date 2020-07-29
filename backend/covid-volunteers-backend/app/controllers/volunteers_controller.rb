@@ -1,17 +1,17 @@
 class VolunteersController < ApplicationController
     def index
-        @volunteers = Volunteer.all
-        render json: @volunteers
+        volunteers = Volunteer.all
+        render json: volunteers
     end
 
     def show
-        @volunteer = Volunteer.find(params[:id])
-        render json: @volunteer
+        volunteer = Volunteer.find(params[:id])
+        render json: volunteer
     end
 
     def create
-        @volunteer = Volunteer.create(volunteer_params)
-        render json: @volunteer
+        volunteer = Volunteer.create(volunteer_params)
+        render json: volunteer
     end
 
     # def update
