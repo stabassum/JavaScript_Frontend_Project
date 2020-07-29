@@ -1,38 +1,28 @@
-# JavaScript_Frontend_Project
+# Front-End Portfolio Project
+This project is a Single Page Application (SPA) that uses a Rails API back-end and a JavaScript + HTML + CSS front-end per assignment specifications.
 
-## JavaScript Single Page Application (SPA)
+## Getting Started
+To run this app locally, you will need to have [Rails](https://rubyonrails.org/) installed.  Once you do, navigate to the Rails back end located at: `./front-end-portfolio-project/back-end` and run the following commands in terminal:
+1. `$ rails db: migrate` to run the ActiveRecord migrations.
+2. `$ rails db: seed` to seed the database.
+3. `$ rails s` to boot up the Rails server.
+With the Rails back end API server running, open a browser and navigate it to the following file location:
+`front-end-portfolio-project/front-end/index.html` and the front end should automatically populate with data from the server.  The page should look similiar to the drawing below entitled: *Application Features*
 
-#### FRONT-END PORTFOLIO PROJECT
+## About This App
+This app is designed for volunteers to register for projects in an emergency response or direct impact on community positively during the COVID-19 times of diffculty.
 
-Getting Started
 
-About This App
-To start the application, cd (change directory) to the “back-end” folder and run the following:
+## What Exactly Is This Application Supposed to Accomplish for the User!?
+Once the app is started, the user is directed to the home page where they will see a form on the top of the screen to add/create a new volunteer for the COVID pandemic.
 
-rails db:migrate
-rails db:seed
-rails s
+Below the volunteer form is displayed the users who are currently registered to volunteer for covid.
 
-The above three commands will do the following sequentially:
+1. Beneath each volunteer are a list of projects they are registered to volunteer for. If a volunteer is not registered for any projects, then there is no list of projects displayed beneath their volunteer information.
 
-Create the database table with the associated columns
-Seed the database table with data 
-Start the server  
+2. A user can create a new volunteer and delete a volunteer
 
-Once you have started the rails server, go to the front-end folder and “double-click” index.html
-You should land on the applications homepage. 
-
-What this app allows users to do:
-
->> Once the app is started, the user is directed to the home page where they will see a form on the top of the screen to add/create a new volunteer for the COVID pandemic.
-
->> Below the volunteer form is displayed the users who are currently registered to volunteer for covid.
-
->> Beneath each volunteer are a list of projects they are registered to volunteer for. If a volunteer is not registered for any projects, then there is no list of projects displayed beneath their volunteer information.
-
->> A user can create a new volunteer and delete a volunteer
-
->> A project that a volunteer registers (create) for can be deleted or edited.
+3. A project that a volunteer registers (create) for can be deleted or edited.
 
 
 Functionalities:
@@ -48,32 +38,8 @@ Project -> Edit (Optional)
 (May delete one of the options above such as : Volunteer -> Create)
 
 
-Name: COVID VOLUNTEERS Single Page Application
-
-Models:
-
-volunteer.rb
-has_many :projects
-
-name
-age
-contact
-skills
-
-project.rb
-belongs_to :volunteer
-
-title
-description
-date
-location
-time
-volunteer_id
-
-What is the Application Supposed to Accomplish for the Users
-
-Project File Structure
-
+## Project File Structure
+```
 front-end-portfolio-project
 ├── back-end
 │   ├── app
